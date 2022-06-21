@@ -1,0 +1,11 @@
+{:paths ["src"]
+ :deps {ring/ring-jetty-adapter {:mvn/version "1.9.5"}}
+ :aliases
+ {:main
+  {:main-opts ["-m" "net.arnebrasseur.jibtest"]}
+  :build
+  {:extra-paths ["build"]
+   :ns-default release
+   :extra-deps {com.google.cloud.tools/jib-core {:mvn/version "0.21.0"}
+                io.github.juxt/pack.alpha       {:git/sha "47ee078edcd6f85353dc5455dc0232c64a46e2ef"}
+                io.github.clojure/tools.build   {:git/tag "v0.8.2" :git/sha "ba1a2bf"}}}}}
